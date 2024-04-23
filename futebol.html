@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<!-- Convertendo texto em números-->
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    // o RETORNO da função PROMPT é sempre em formato de TEXTO e não de números
+    var vitorias = parseInt(prompt("Digite o número de vitórias "));   // parseInt converte o que for inserido em número
+    // alert(vitorias * 3)   // o ALERT escaneia o prompt, identifica se tem números dentro do texto, para converté-los em números operacionais
+
+    var empates = parseInt(prompt("Digite o número de empates "));
+
+    var pontos = vitorias * 3 + empates;
+
+    mostra("Seu time tem " + pontos)
+
+    if(pontos > 28) {
+        mostra("Seu time está melhor ");
+    }
+
+    if(pontos < 28) {
+        mostra("Seu time está pior ");
+    }
+
+    if(pontos == 28) {
+        mostra("Seu time está igual ")
+    }
+
+
+</script>

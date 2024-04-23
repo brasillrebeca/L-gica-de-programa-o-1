@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    // ao inserir os parâmetros depois, no código, manter a mesma sequência
+    function calculaImc(altura, peso) {
+        return peso / (altura * altura);  // *** se no RETURN, em algum momento, eu substituir o cálculo por "QUALQUER COISA"
+    }
+
+    // Evolução do código:
+    // var imcFlavio = calculaImc(1.71, 73);
+    // var imcAmigo = calculaImc(1.72, 68);
+    // var totalImc = imcFlavio + imcAmigo
+
+
+    // 1) função que determina como operar as variáveis altura e peso
+    // 2)        nome da função(altura, peso)
+    var totalImc = calculaImc(1.71, 73) + calculaImc(1.72,68); // *** como substituí o RETURN por"QUALQUER COISA"
+    // 3) RESULTADO FINAL recebe a SOMA entre as VARIÁVEIS  
+
+    document.write("A soma dos imc's é " + totalImc);  // *** o navegador exibirá a concatenação entre a STR e o RETURN: ""A soma dos imcs é QUALQUER COISA
+    // escrever fora da função, porque posso escolher diferentes formatos para exibir o resultado dessa função. Ex.: sms, email...
+
+    // mostra(imcFlavio);
+    // mostra(imcAmigo);
+
+</script>

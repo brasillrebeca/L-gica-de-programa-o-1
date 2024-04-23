@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    // a função sorteia para o array números aleatórios 
+    function sorteia () {
+        return Math.round(Math.random() * 10);
+    }
+    // var segredos = [];
+    // o push empurra para dentro do array o número que a função sorteou
+    // para não escrever esse comando 800 vezes, vamos automatizar esse processo
+    // segredos.push(sorteia());
+
+    function sorteiaNumeros (quantidade) {
+
+        var segredos = []; // não recebeu ngm ainda
+
+        var numero = 1; // inicializando o contador
+        while (numero <= quantidade) {
+            
+            var numeroAleatorio = sorteia();
+
+            if(numeroAleatorio !== 0) {
+                
+                var achou = false;
+
+                for(var posição = 0; posição < segredos.legth; posição++)
+
+                    if(segredos[posição] == numeroAleatorio) {
+                        achou = true;
+                        break
+                    }
+                if(achou == false) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+            
+        }
+
+        return segredos;
+    }
+    var segredos = sorteiaNumeros(5); // o numero é sobre quantas vezes a função vai se repetir
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+        var achou = false;
+
+        for(var posição = 0; posição < segredos.length; posição++) {
+            
+            if(input.value == segredos[posição]) {
+
+                alert("Você ACERTOU ")
+
+                achou = true;
+                break;
+            }
+        }
+
+        if(achou = false) {
+            alert("Você errou ")
+        }
+        
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button"); 
+
+    button.onclick = verifica;
+</script>

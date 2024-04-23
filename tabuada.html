@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    // var multiplicador = 1; no FOR a variável fica dentro
+    //primeiro espaço: variável; segundo: condição para repetir; incremento
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador = multiplicador + 1) {
+        mostra(7 * multiplicador);
+        // no for, diferente do while, o incremento entra lá em cima: multiplicador = multiplicador + 1;
+    }
+
+    mostra("FIM")
+
+</script>

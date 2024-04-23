@@ -1,0 +1,28 @@
+<!-- Usando declaração de variáveis para reduzir alterações -->
+<!-- O programa ler o código linha a linha, logo a qualquer momento posso alterar o valor da variável
+    que as linhas seguintes serão lidas com base no valor alterado-->
+<meta charset="UTF-8">
+<!--Para atribuir um valor à variável pela primeira vez, usa VAR, para alterar, não precisa declarar var novamente-->
+<script>
+
+    var ano = 2024; 
+
+    document.write("Barney tem " + (ano - 1976) + " anos" + "<br>");
+    document.write("Flávio tem " + (ano - 1977) + " anos" + "<br>");
+
+    ano = 2017
+    document.write("Flávio tem " + (ano - 1977) + " anos");
+
+    var media = (39 + 20 + 41)/3
+
+    document.write("A média das idades é " + Math.round(media))
+
+    // melhorar a manutenção e legibilidade do código
+    // começar variável com letra minúscula e se for com 2 nomes o segundo começa com maiúscula
+    var idadeFlavio = 39;
+    var idadeJoaquim = 20;
+    var idadeBarney = 41;
+
+    var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3
+
+</script>

@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    
+    var segredos = [5,7,10,2];
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+//      o programa só pode exibir a msg de erro, no final, SE eu errar e, pra ele identificar isso, preciso criar uma operação lógica
+        var achou = false;
+//      melhor usar o lenght, pq se eu alterar a qntd de elementos em meu array, ele acompanha a contagem 
+        for(var posição = 0; posição < segredos.length; posição++) {
+            
+            if(input.value == segredos[posição]) {
+
+                alert("Você ACERTOU ")
+                // operação lógica para exibir a mensagem de erro no final
+                achou = true;
+                break;
+
+            // eu não quero que o código mostre uma msg de erro a cada erro    
+            //} else {
+
+                //alert("Você ERROU ")
+            }
+        }
+
+        if(achou = false) {
+            alert("Você errou ")
+        }
+        
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button"); // receber o valor do botão
+
+    button.onclick = verifica;
+</script>

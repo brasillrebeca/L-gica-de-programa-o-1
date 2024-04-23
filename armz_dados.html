@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    // como fazer uma variável acertar uma lsita de valores? com ARRAY
+    // índices do array que o for vai percorrer
+    var segredoS = [5,7,10,2];
+    // criar uma variável dentro do mundo JS para receber o valor que inseri no html
+    var input = document.querySelector("input");
+    input.focus();
+    // para a função verificar se o input é igual ao array, ela precisa PERCORRER todo o meu array
+    function verifica() {
+        //  posição do array / condição para parar de repetir / condição de incremento
+        for(var posição = 0; posição < 4; posição++) {
+            
+            if(input.value == segredoS[posição]) {
+
+                alert("Você ACERTOU ")
+            } else {
+
+                alert("Você ERROU ")
+            }
+        }
+
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button"); // receber o valor do botão
+
+    button.onclick = verifica;  // sem o parêntese, pois quero apenas chamar o código da função e não executá-la
+    // todo o código do verifica vai ser copiado para dentro do botão, no onclick
+</script>
